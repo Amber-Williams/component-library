@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "target": "es2016",
+      "outDir": "dist",
+      "typeRoots": ["node_modules/@types"],
+      "esModuleInterop": true,
+      "declaration": true,
+      "declarationDir": "types",
+      "sourceMap": true,
+      "allowJs": true,
+      "skipLibCheck": true,
+      "jsx": "react-jsx",
+      "module": "ESNext",
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "emitDeclarationOnly": true,
+      "jsxImportSource": "@emotion/react"
+    },
+    "include": [
+      "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "playground"
+    ]
+  }
