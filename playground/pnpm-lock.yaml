@@ -3189,6 +3189,7 @@ packages:
     resolution: {directory: .., type: directory}
     id: file:..
     name: '@amber/component-library'
+    engines: {node: '>=18'}
     peerDependencies:
       react: ^18.2.0
       react-dom: ^18.2.0

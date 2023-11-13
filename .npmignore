@@ -1,0 +1,10 @@
+node_modules/
+
+assets/
+playground/
+src/
+rollup.config.js
+README.md
+tsconfig.json
+LICENSE
+package.json
