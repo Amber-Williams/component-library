@@ -3,7 +3,7 @@ import AppThemeProvider from "./AppThemeProvider";
 
 const Theme = {
   Provider: AppThemeProvider,
-  useTheme,
+  useTheme: useTheme as typeof useTheme,
 };
 
 export default Theme;
