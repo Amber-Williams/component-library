@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { AppThemeProvider, Background, Card, Core, SignInForm } from '@amber/component-library';
+import { Background, Card, Core, SignInForm, Theme } from '@amber/component-library';
 
 import './main.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <AppThemeProvider mode="light">
+    <Theme.Provider mode="dark">
       <Background.Surface>
-        <Background.ContourMapSVG size={1000} />
+        <Background.ContourMapSVG size={1000}/>
       </Background.Surface>
       <Core.Container maxWidth="sm">
         <Card
@@ -20,6 +20,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <SignInForm />
         </Card>
       </Core.Container>
-    </AppThemeProvider>
+    </Theme.Provider>
   </React.StrictMode>,
 );

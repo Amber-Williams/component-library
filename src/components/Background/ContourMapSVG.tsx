@@ -1,6 +1,6 @@
 import { useTheme } from "@mui/material";
 
-const ContourMapSVG = ({ size }: { size: number }) => {
+const ContourMapSVG = ({ size, scale }: { size: number; scale?: number }) => {
   const { palette, zIndex } = useTheme();
   const width = 9.6 * size;
   const height = 5.75 * size;
@@ -12,7 +12,10 @@ const ContourMapSVG = ({ size }: { size: number }) => {
       height={height}
       fill="none"
       opacity={0.12}
-      style={{ zIndex: zIndex.surface }}
+      style={{
+        zIndex: zIndex.surface,
+        transform: scale ? `scale(${scale})` : "scale(2.5)",
+      }}
       viewBox={`0 0 ${width} ${height}`}
     >
       <defs>
