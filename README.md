@@ -27,4 +27,4 @@ This is an ease of use playground using Vite that can plug into the local compon
 
 There isn't hot reloading _currently_ so you will need to uninstall the component library package, to ensure package caching doesn't get in the way the best way to do this is to remove all packages before reinstalling and rerunning
 
-- _recommended_ manual reload - `cd playground && rm -rf node_modules/@amber/component-library/ && pnpm install && pnpm dev`
+- _recommended_ manual reload - `cd playground && rm -rf node_modules && pnpm install && pnpm dev`

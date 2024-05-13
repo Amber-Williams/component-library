@@ -4,6 +4,9 @@
   "coreColors": {
     "primary": "#005457"
   },
+  "shape": {
+    "borderRadius": 8
+  },
   "schemes": {
     "light": {
       "primary": "#006C4B",
@@ -88,7 +91,7 @@
       "outline": "#9F8C8D",
       "background": "#0f1011",
       "onBackground": "#dfe3ec",
-      "surface": "#121518",
+      "surface": "#0f1011",
       "onSurface": "#c4c7d0",
       "surfaceVariant": "#434952",
       "onSurfaceVariant": "#c1c8d7",

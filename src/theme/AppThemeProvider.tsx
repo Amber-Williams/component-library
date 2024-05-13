@@ -22,6 +22,14 @@ declare module "@mui/material/styles" {
 export default ({ children, mode }: Props) => {
   const theme = responsiveFontSizes(
     createTheme({
+      components: {
+        MuiButtonBase: {
+          defaultProps: {
+            disableRipple: true,
+          },
+        },
+      },
+      shape: _theme.shape,
       palette: {
         mode: mode as PaletteMode,
         primary: {
