@@ -14,7 +14,13 @@ const addTransparency = (hexColor: string, opacity: number) => {
   return hexColor + _opacity.toString(16).toUpperCase();
 };
 
-const getChipStyle = ({ theme, color, variant, isSquare }: IChipProps) => {
+const getChipStyle = ({
+  theme,
+  color,
+  variant,
+  isSquare,
+  onClick,
+}: IChipProps) => {
   let _color = color;
   if (color && theme.palette[color]) {
     _color = theme.palette[color].main;
@@ -26,9 +32,12 @@ const getChipStyle = ({ theme, color, variant, isSquare }: IChipProps) => {
       border: 1px solid ${_color};
       background-color: ${addTransparency(_color, 0.2)};
       ${isSquare && `border-radius: ${theme.shape.borderRadius}px;`}
-      &:hover {
-        background-color: ${addTransparency(_color, 0.3)};
-      }
+      ${onClick &&
+      css`
+        &:hover {
+          background-color: ${addTransparency(_color, 0.4)};
+        }
+      `}
     `;
   }
 };
