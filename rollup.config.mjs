@@ -13,14 +13,9 @@ export default [
     input: "src/index.ts",
     output: [
       {
-        file: pkg.main,
-        format: "cjs",
-        sourcemap: true,
-      },
-      {
         file: pkg.module,
         format: "esm",
-        sourcemap: true,
+        sourcemap: false,
       },
     ],
     plugins: [
@@ -34,12 +29,5 @@ export default [
       terser(),
       json(),
     ],
-  },
-  {
-    input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts()],
-
-    external: [/\.css$/], // telling rollup anything that is .css aren't part of type exports
   },
 ];
