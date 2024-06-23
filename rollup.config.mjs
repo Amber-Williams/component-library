@@ -14,7 +14,7 @@ export default [
     output: [
       {
         file: pkg.module,
-        format: "esm",
+        format: "cjs",
         sourcemap: false,
       },
     ],
@@ -29,5 +29,12 @@ export default [
       terser(),
       json(),
     ],
+  },
+  {
+    input: "dist/cjs/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "cjs" }],
+    plugins: [dts()],
+
+    external: [/\.css$/], // telling rollup anything that is .css aren't part of type exports
   },
 ];
